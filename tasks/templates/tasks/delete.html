@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style type="text/css">
+	
+	body{
+		background-color: #638CB8;
+	}
+
+	.todo{
+
+	}
+
+
+	.center-column{
+		width:1000px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	}
+
+	.todo{
+		text-align: center;
+		color: yellow;
+		background-color: red;
+	}
+	.bt{
+		color:red;
+	}
+	.ht{
+		background-color: grey;
+	}
+	.delete{
+		text-align: center;
+		background-color: red;
+	}
+
+</style>
+<h1 class='delete'>Delete Task</h1>
+<div class='center-column'>
+	<h2 class='ht'>are u sure to delete this item:"{{ item }}"?</h2>
+
+<a href="{% url "index" %}"><button class='bt'>cancel</button></a>
+
+<form method="POST" action="">
+	{% csrf_token %}
+	<input class='btn btn-info'type="submit" name="confirm">
+	
+</form>
+
+
+</div>

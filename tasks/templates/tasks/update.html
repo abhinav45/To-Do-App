@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style type="text/css">
+	
+	body{
+		background-color: #638CB8;
+	}
+
+	.todo{
+
+	}
+
+
+	.center-column{
+		width:600px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+	}
+
+	.todo{
+		text-align: center;
+		color: yellow;
+		background-color: red;
+	}
+
+</style>
+<h3 class='todo'>update task</h3>
+<div class="center-column">
+	<form method='POST',action=''>
+	{{ form.as_p}}
+	{% csrf_token %}
+
+	<input class='btn btn-info' type="submit" name="update">
+	</form>
+	
+</div>
